@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+    <script>
+        const name = "tejas";
+        const age = 25;
+        console.log(`hello my name is ${name} and my age is ${age}`);
+
+
+        // Return Object
+        //ES5
+        function getbook(title, author) {
+            return {
+                title, author
+            }
+        }
+
+        //ES6
+        const getbook1 = (title, author) => ({ title, author });
+
+        const book = getbook("harry potter", "jk");
+        const book1 = getbook1("mybook", "tejas")
+        console.log(book);
+        console.log(book1);
+
+        // Object Destructuring
+        const list = {
+            iname: "shoppinglist",
+            items: ["milk", "chocolate"],
+            gtuyguy: undefined
+        }
+
+        console.log(list);
+        const { iname, items, gtuyguy = 4564 } = list;
+
+        console.log(iname);
+        console.log(items);
+
+
+        // Arrow Function
+        const saylocation = () => {
+            console.log('my location is unknown');
+        }
+        saylocation();
+
+        const saylocation1 = (location) => {
+            console.log(`my location is ${location}`);
+        }
+        saylocation1('paris');
+
+
+        // Default Parameters
+        const add = (a = 1, b = 1) => {
+
+            console.log(a + b);
+        }
+        add();
+        add(10, 10);
+
+
+        // ES6 Array Functions
+        const shoppinglist = ['milk', 'cow', 'eggs', 'banana', 'chocolate'];
+
+        // 1.ForEach
+        shoppinglist.forEach((value, index) => {
+            console.log(`The Product ${index} is ${value}`);
+        });
+
+        // 2.Map Function
+        const maplist = shoppinglist.map(value => value + "new");
+        console.log(maplist);
+
+        // 3.Filter Function
+        const filterlist = shoppinglist.filter(value => value !== "milk");
+        console.log(filterlist);
+
+
+
+        // Rest Parameter
+        const sum = (...args) => {
+            let sum1 = 0;
+            for (arg of args)
+                sum1 += arg;
+            return sum1;
+        }
+        const x = sum(1, 2, 3, 4, 5, 6);
+        console.log(x);
+
+
+
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const car1 = new Car("ford", 2010);
+        const car2 = new Car("audi", 2000);
+
+        console.log(`my car name ${car1.name} and year is ${car1.year}`);
+
+    </script>
+</body>
+
+</html>

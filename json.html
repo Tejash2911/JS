@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>json</title>
+</head>
+<body>
+    <h2>Creating an Object Parsing JSON</h2>
+    <p id="demo"></p>
+
+    <script>
+        const myJSON = '{"name":"John", "age":30, "car":null}';
+        const myObj = JSON.parse(myJSON);
+
+        console.log(myObj);
+
+        let text = "";
+        for (x in myObj) {
+            text += x + " - " + myObj[x] + "<br><br>";
+        }
+        
+        let arr = Object.values(myObj);
+        console.log(arr);
+
+        let mystring = JSON.stringify(myObj);
+
+        console.log(mystring);
+        console.log(myJSON);
+
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html>

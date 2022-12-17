@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        const num = [45, 4, 9, 16, 25];
+
+        // ES5 syntax
+        const num2 = num.filter(function (x) {
+            return x = x < 20;
+        });
+        const num3 = num.map(function (x) {
+            return x = x * 2;
+        });
+        const num4 = num.reduce(function (x, y) {
+            return x + y;
+        });
+
+        // ES6 syntax
+        const num5 = num.filter(x => x < 20);
+        const num6 = num.map(x => x * 2);
+        const num7 = num.reduce((x, y) => x + y);
+
+        console.log(num2);
+        console.log(num3);
+        console.log(num4);
+        console.log(num5);
+        console.log(num6);
+        console.log(num7);
+
+        num.sort(function (a, b) {
+            return a - b;
+        })
+        console.log(num);
+
+        let position = num.indexOf(25) + 1;
+        console.log(position);
+
+        function myfunction(value) {
+            return value > 20;
+        }
+
+        const ev = num.every(myfunction);       
+        console.log(ev);
+
+        const so = num.some(myfunction);
+        console.log(so);
+
+        const fi = num.find(myfunction);        
+        console.log(fi);
+
+        const fii = num.findIndex(value => value > 20);
+        console.log(fii);
+
+        const keys = num.keys();
+        for (let x of keys) {
+            console.log(x);
+        }
+
+        const ent = num.entries();
+        for (let x of ent) {
+            console.log(x);
+        }
+
+        console.log(num.includes(45));
+    </script>
+</body>
+
+</html>

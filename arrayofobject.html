@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var author = [
+            {
+                "name": "a",
+                "age": 36,
+            },
+            {
+                "name": "b",
+                "age": 50,
+            },
+            {
+                "name": "c",
+                "age": 25,
+            },
+            {
+                "name": "d",
+                "age": 41,
+            }
+        ]
+
+        let sum = 0;
+        let avg = 0;
+        let n = '';
+
+        for (x of author) {
+            sum += x.age;
+            avg += x.age / author.length;
+        }
+        for (x of author) {
+            n += x.name;
+        }
+        console.log(author[0].name)
+        console.log(n);
+
+        console.log("sum using for is = " + sum);
+        console.log("avg using for is = " + avg);
+
+        let sum2 = 0;
+
+        sum2 = author.reduce(function (a, b) {
+            console.log(a, b);
+            return (a.age || a) + b.age;
+        });
+
+        let sum3 = 0;
+
+        sum3 = author.map(function (x) {
+            return sum3 += x.age;
+        })[author.length - 1];
+
+        console.log("sum using reduce is = " + sum2);
+
+        console.log("sum using map is = " + sum3);
+
+        let mystring = JSON.stringify(author);
+
+        console.log(mystring);
+
+        const myObj = {
+            name: "John",
+            age: 30,
+            cars: [
+                { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+                { name: "BMW", models: ["320", "X3", "X5"] },
+                { name: "Fiat", models: ["500", "Panda"] }
+            ]
+        }
+
+        console.log(myObj);
+        console.log(myObj.cars[0].models[0]);
+
+        for (i in myObj.cars) {
+            x += "<h2>" + myObj.cars[i].name + "</h2>";
+            for (j in myObj.cars[i].models) {
+                x += myObj.cars[i].models[j] + "<br>";
+            }
+        }
+        my = Object.values(myObj);
+        my.forEach((value, index) => {
+            console.log(`the key ${index} is ${value}`);
+        });
+
+
+        document.getElementById("demo").innerHTML = x;
+
+    </script>
+</body>
+
+</html>

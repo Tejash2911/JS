@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Use property value shorthand
+        const myname = "tejas";
+        const age = 25;
+        //Group your shorthand properties at the beginning of your object declaration.
+        const obj = {
+            myname,
+            age,
+            gender: 'male'
+        };
+        //Use the object rest parameter syntax to get a new object with certain properties omitted.
+        const obj1 = {
+            ...obj,
+            hobby: 'cricket'
+        }
+
+        const { gender, ...obj2 } = obj1;
+
+        console.log(obj);
+        console.log(obj1);
+        console.log(obj2);
+
+        // Use the literal syntax for array creation.
+        const a = [];
+
+        // Use Array#push instead of direct assignment to add items to an array.
+        a.push('tejas');
+        a.push('patel');
+
+        // Use array spreads ... to copy arrays.
+        acopy = [...a, 25];
+        console.log(a);
+        console.log(acopy);
+
+        // To convert an iterable object to an array, use spreads ... instead of Array.from
+
+        // const foo = prompt('enter any');
+        // const nodes = [...foo];
+        // console.log(nodes);
+
+        // Use Array.from for converting an array-like object to an array.
+        const arrLike = { 0: 'foo', 1: 'bar', 2: 'baz', length: 3 };
+        const arrr = Array.from(arrLike);
+        console.log(arrr);
+
+        // Use return statements in array method callbacks
+        arr = [1, 2, 3].map((x) => {
+            const y = x + 1;
+            return x * y;
+        });
+
+        arr2 = [1, 2, 3].map((x) => x + 1);
+
+        console.log(arr);
+        console.log(arr2);
+
+        arr3 = [[0, 1], [2, 3], [4, 5]].reduce((total, value) => {
+            const con = total.concat(value);
+            return con;
+        });
+
+        console.log(arr3);
+
+        // Array Destructuring
+        const [first, second, third] = arr3;
+        console.log(first, second, third);
+
+        // Use object destructuring when accessing and using multiple properties of an object.
+        const user = {
+            firstname: 'tejas',
+            lastname: 'patel'
+        }
+        function getFullName(user) {
+            const { firstname, lastname } = user;
+            return `${firstname} ${lastname}`;
+        }
+        // Same as Above
+        function getFullName1({firstname, lastname}){
+            return `${firstname} ${lastname}`;
+        }
+        // Using Arrow Function
+        const getname = ({firstname, lastname}) => `${firstname} ${lastname}`;
+
+        x = getname(user);
+        console.log(x);
+
+    </script>
+</body>
+
+</html>
