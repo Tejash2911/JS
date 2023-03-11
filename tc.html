@@ -1,365 +1,376 @@
 <html>
 
 <head>
-    <title>Tejas Patel</title>
-    <style type="text/css">
-        body {
-            padding: 50px 100px;
-            background-color: #3D424A;
-        }
+  <title>SMALL PROGRAMS BY TEJASH PATEL</title>
+  <style type="text/css">
+    ::selection {
+      background-color: black;
+      color: yellow;
+    }
 
-        h1 {
-            text-align: center;
-            color: white;
-        }
+    body {
+      padding: 50px 100px;
+      background-color: #3d424a;
+    }
 
-        #textbox {
-            width: 100%;
-            border-color: blue;
-            font-size: 15px;
-        }
+    h1 {
+      text-align: center;
+      color: white;
+    }
 
-        p {
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 10px;
-            margin: 0px;
-            background-color: #FEAE49;
-        }
+    #textbox {
+      width: 100%;
+      border-color: #feae49;
+      font-size: 15px;
+      resize: vertical;
+    }
 
-        #container {
-            text-align: center;
-            background-color: #57BEE6;
-            padding: 50px;
-        }
+    textarea:focus {
+      outline: none;
+    }
 
-        .inputdiv {
-            display: inline-block;
-        }
+    input:focus {
+      outline: none;
+    }
 
-        .inp {
-            padding: 5px 10px;
-            margin: 10px;
-            font-size: 30px;
-            font-weight: bold;
-            width: 250px;
-            text-align: center;
-        }
+    p {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px;
+      margin: 0px;
+      background-color: #feae49;
+    }
 
-        lable {
-            font-size: 22px;
-        }
+    #container {
+      text-align: center;
+      background-color: #57bee6;
+      padding: 50px;
+    }
 
-        #form-container {
-            background-color: #F582AE;
-            padding: 50px;
-            text-align: center;
-        }
+    .inputDiv {
+      display: inline-block;
+    }
 
-        h2 {
-            margin: 0px 0px 10px 0px;
-        }
+    .inp {
+      padding: 5px 10px;
+      margin: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      width: 250px;
+      text-align: center;
+    }
 
-        input {
-            width: 200px;
-            margin: 10px 0px;
-            padding: 10px;
-        }
+    label {
+      font-size: 22px;
+    }
 
-        input[type="submit"] {
-            width: 222px;
-        }
+    #form-container {
+      background-color: #f582ae;
+      padding: 30px;
+      text-align: center;
+    }
 
-        .error {
-            color: red;
-        }
+    h2 {
+      margin: 0px 0px 10px 0px;
+    }
 
-        #userError {
-            background-color: #F582AE;
-        }
+    input {
+      width: 200px;
+      margin: 5px 0px;
+      padding: 8px;
+    }
 
-        #passError {
-            background-color: #F582AE;
-        }
+    .error {
+      color: red;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+    }
 
-        #watch-container {
-            background-color: #2c3e50;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #d7dfe4;
-        }
+    #userError {
+      background-color: #f582ae;
+    }
 
-        .digit {
-            font-size: 100px;
-            font-weight: bold;
-        }
+    #passError {
+      background-color: #f582ae;
+    }
 
-        .txt {
-            font-size: 30px;
-            font-weight: bold;
-        }
+    #watch-container {
+      background-color: #2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #d7dfe4;
+      padding: 10px;
+    }
 
-        #btn-container {
-            text-align: center;
-            margin: 40px;
-        }
+    .digit {
+      font-size: 100px;
+      font-weight: bold;
+    }
 
-        .btn {
-            padding: 7px 25px;
-            font-size: 15px;
-            margin: 0px 10px;
-            cursor: pointer;
-            color: white;
-            border: 0px;
-        }
+    .txt {
+      font-size: 30px;
+      font-weight: bold;
+    }
 
-        #start {
-            background-color: #1abc9c;
-        }
+    #btn-container {
+      text-align: center;
+      margin: 20px 0px 0px 0px;
+    }
 
-        #stop {
-            background-color: #3498db;
-        }
+    .btn {
+      padding: 7px 25px;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 0px 10px;
+      cursor: pointer;
+      color: white;
+      border: none;
+    }
 
-        #reset {
-            background-color: #e74c3c;
-        }
+    #start {
+      background-color: #1abc9c;
+    }
 
-        hr {
-            margin: 70px 10px 10px 10px;
-        }
+    #stop {
+      background-color: #3498db;
+    }
 
-        #pass-container {
-            text-align: center;
-            align-items: center;
-            background-color: #F3D2C1;
-        }
-    </style>
+    #reset {
+      background-color: #e74c3c;
+    }
 
+    hr {
+      margin: 60px 0px 10px 0px;
+    }
+
+    #pass-container {
+      text-align: center;
+      align-items: center;
+      background-color: #f3d2c1;
+      padding: 30px;
+    }
+  </style>
 </head>
 
 <body>
-    <h1>Temprature Converter</h1>
-    <div id="container">
-        <div class="inputdiv">
-            <label>Celsius</label><br>
-            <input type="number" value="0" id="cel" class="inp">
-        </div>
-        <div class="inputdiv">
-            <label>Fahrenheit</label><br>
-            <input type="number" value="32" id="fah" class="inp">
-        </div>
+  <!-- TEMPERATURE CONVERTER======================================================================================================================================================= -->
+  <h1>Temperature Converter</h1>
+  <div id="container">
+    <div class="inputDiv">
+      <label>Celsius</label><br />
+      <input type="number" value="0" id="cel" class="inp" />
     </div>
-
-    <hr>
-    <h1>Word and Character Counter</h1>
-    <textarea id="textbox" cols="30" rows="10"></textarea>
-    <p>
-        <span id="word">0</span> Words And
-        <span id="char">0</span> Character
-    </p>
-
-
-    <hr>
-    <h1>Form Validation</h1>
-    <div id="form-container">
-        <h2>Login</h2>
-        <form action="" onsubmit="return validateform()">
-            <input type="text" placeholder="username" id="username"><br>
-            <p id="userError" class="error"></p>
-            <input type="password" placeholder="password" id="password"><br>
-            <p id="passError" class="error"></p>
-            <input type="submit">
-        </form>
+    <div class="inputDiv">
+      <label>Fahrenheit</label><br />
+      <input type="number" value="32" id="fah" class="inp" />
     </div>
+  </div>
 
+  <hr />
+  <!-- WORD AND CHARACTER COUNTER================================================================================================================================================== -->
+  <h1>Word and Character Counter</h1>
+  <textarea id="textbox" cols="30" rows="10"></textarea>
+  <p><span id="word">0</span> Words And <span id="char">0</span> Character</p>
 
-    <hr>
-    <h1>StopWatch</h1>
-    <div id="watch-container">
-        <div id="time">
-            <span class="digit" id="hr">00</span>
-            <span class="txt">Hr</span>
-            <span class="digit" id="min">00</span>
-            <span class="txt">Min</span>
-            <span class="digit" id="sec">00</span>
-            <span class="txt">Sec</span>
-            <span class="digit" id="count">00</span>
-        </div>
+  <hr />
+  <!-- FORM VALIDATION============================================================================================================================================================= -->
+  <h1>Form Validation</h1>
+  <div id="form-container">
+    <h2>Login</h2>
+    <form action="" onsubmit="return validateForm()">
+      <input type="text" placeholder="username" id="username" /><br />
+      <p id="userError" class="error"></p>
+      <input type="password" placeholder="password" id="password" /><br />
+      <p id="passError" class="error"></p>
+      <input type="submit" />
+    </form>
+  </div>
+
+  <hr />
+  <!-- STOPWATCH=================================================================================================================================================================== -->
+  <h1>StopWatch</h1>
+  <div id="watch-container">
+    <div id="time">
+      <span class="digit" id="hr">00</span>
+      <span class="txt">Hr</span>
+      <span class="digit" id="min">00</span>
+      <span class="txt">Min</span>
+      <span class="digit" id="sec">00</span>
+      <span class="txt">Sec</span>
+      <span class="digit" id="count">00</span>
     </div>
+  </div>
 
-    <div id="btn-container">
-        <button class="btn" id="start" onclick="start()">Start</button>
-        <button class="btn" id="stop" onclick="stop()">Stop</button>
-        <button class="btn" id="reset" onclick="reset()">Reset</button>
-    </div>
-
-    <!--
-<hr>
-<h1>Password Generator</h1>
-<div id="pass-container">
-<span>Click on the button to generate Password</span><br>
-<button onclick="gen()" class="btn1">Click Here</button>
-<span id="pgen"></span>
-</div>
--->
-
-    <script type="text/javascript">
-
-        //TEMPRATURE CONVERTER
-        var cel = document.getElementById("cel");
-        var fah = document.getElementById("fah");
-
-        cel.addEventListener("input", function () {
-            let c = this.value;
-            let f = (c * 9 / 5) + 32;
-            if (!Number.isInteger(f)) {
-                f = f.toFixed(4);
-            };
-            fah.value = f;
-        });
-
-        fah.addEventListener("input", function () {
-            let f = this.value;
-            let c = (f - 32) * 5 / 9;
-            if (!Number.isInteger(c)) {
-                c = c.toFixed(4);
-            };
-            cel.value = c;
-        });
+  <div id="btn-container">
+    <button class="btn" id="start" onclick="start_fn()">Start</button>
+    <button class="btn" id="stop" onclick="stop_fn()">Stop</button>
+    <button class="btn" id="reset" onclick="reset_fn()">Reset</button>
+  </div>
 
 
-        //WORD AND CHARACTER COUNTER
-        let textbox = document.getElementById("textbox");
-
-        textbox.addEventListener("input", function () {
-            var text = this.value;
-            let char = text.length;
-            document.getElementById("char").innerHTML = char;
-
-            text = text.trim();
-            let words = text.split(" ");
-            let cleanList = words.filter(function (elm) {
-                return elm != "";
-            });
-            document.getElementById("word").innerHTML = cleanList.length;
-        });
+  <hr>
+  <!-- PASSWORD GENERATOR========================================================================================================================================================== -->
+  <h1>Password Generator</h1>
+  <div id="pass-container">
+    <span>Click on the button to generate Password</span><br>
+    <button onclick="gen()" class="btn1">Click Here</button>
+    <span id="pGen"></span>
+  </div>
 
 
-        //FORM VALIDATION
-        let username = document.getElementById("username");
-        let password = document.getElementById("password");
-        let flag = 1;
+  <script type="text/javascript">
+    //TEMPERATURE CONVERTER============================================================================================================================================================
+    var cel = document.getElementById("cel");
+    var fah = document.getElementById("fah");
 
-        function validateform() {
-            if (username.value == "") {
-                document.getElementById("userError").innerHTML = "Username is Empty";
-                flag = 0;
-            } else if (username.value.length < 3) {
-                document.getElementById("userError").innerHTML = "Username Required Min 3 char";
-                flag = 0;
-            } else {
-                document.getElementById("userError").innerHTML = "";
-                flag = 1;
-            }
+    cel.addEventListener("input", function () {
+      let c = this.value;
+      let f = (c * 9) / 5 + 32;
+      if (!Number.isInteger(f)) {
+        f = f.toFixed(4);
+      }
+      fah.value = f;
+    });
 
-            if (password.value == "") {
-                document.getElementById("passError").innerHTML = "Password is Empty";
-                flag = 0;
-            } else {
-                document.getElementById("passError").innerHTML = "";
-                flag = 1;
-            }
-            if (flag) {
-                return true;
-            } else {
-                return false;
-            }
+    fah.addEventListener("input", function () {
+      let f = this.value;
+      let c = ((f - 32) * 5) / 9;
+      if (!Number.isInteger(c)) {
+        c = c.toFixed(4);
+      }
+      cel.value = c;
+    });
+
+    //WORD AND CHARACTER COUNTER=======================================================================================================================================================
+    let textbox = document.getElementById("textbox");
+
+    textbox.addEventListener("input", function () {
+      var text = this.value;
+      let char = text.length;
+      document.getElementById("char").innerHTML = char;
+
+      text = text.trim();
+      let words = text.split(" ");
+      let cleanList = words.filter(function (elm) {
+        return elm != "";
+      });
+      document.getElementById("word").innerHTML = cleanList.length;
+    });
+
+    //FORM VALIDATION==================================================================================================================================================================
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+    let flag = 1;
+
+    function validateForm() {
+      if (username.value == "") {
+        document.getElementById("userError").innerHTML = "Username is Empty";
+        flag = 0;
+      } else if (username.value.length < 3) {
+        document.getElementById("userError").innerHTML =
+          "Username Required Min 3 char";
+        flag = 0;
+      } else {
+        document.getElementById("userError").innerHTML = "";
+        flag = 1;
+      }
+
+      if (password.value == "") {
+        document.getElementById("passError").innerHTML = "Password is Empty";
+        flag = 0;
+      } else {
+        document.getElementById("passError").innerHTML = "";
+        flag = 1;
+      }
+      if (flag) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    //STOPWATCH========================================================================================================================================================================
+    var hr = 0;
+    var min = 0;
+    var sec = 0;
+    var count = 0;
+
+    var timer = false;
+
+    function start_fn() {
+      timer = true;
+      stopwatch();
+    }
+    function stop_fn() {
+      timer = false;
+    }
+    function reset_fn() {
+      timer = false;
+      hr = 0;
+      min = 0;
+      sec = 0;
+      count = 0;
+
+      document.getElementById("hr").innerHTML = "00";
+      document.getElementById("min").innerHTML = "00";
+      document.getElementById("sec").innerHTML = "00";
+      document.getElementById("count").innerHTML = "00";
+    }
+
+    function stopwatch() {
+      if (timer == true) {
+        count = count + 1;
+
+        if (count == 100) {
+          sec = sec + 1;
+          count = 0;
+        }
+        if (sec == 60) {
+          min = min + 1;
+          sec = 0;
+        }
+        if (min == 60) {
+          hr = hr + 1;
+          min = 0;
+          sec = 0;
         }
 
+        var hrString = hr;
+        var minString = min;
+        var secString = sec;
+        var countString = count;
 
-        //STOPWATCH
-        var hr = 0;
-        var min = 0;
-        var sec = 0;
-        var count = 0;
-
-        var timer = false;
-
-        function start() {
-            timer = true;
-            stopwatch();
+        if (hr < 10) {
+          hrString = "0" + hrString;
         }
-        function stop() {
-            timer = false;
+        if (min < 10) {
+          minString = "0" + minString;
         }
-        function reset() {
-            timer = false;
-            hr = 0;
-            min = 0;
-            sec = 0;
-            count = 0;
-
-            document.getElementById("hr").innerHTML = "00";
-            document.getElementById("min").innerHTML = "00";
-            document.getElementById("sec").innerHTML = "00";
-            document.getElementById("count").innerHTML = "00";
+        if (sec < 10) {
+          secString = "0" + secString;
         }
-
-        function stopwatch() {
-            if (timer == true) {
-                count = count + 1;
-
-                if (count == 100) {
-                    sec = sec + 1;
-                    count = 0;
-                }
-                if (sec == 60) {
-                    min = min + 1;
-                    sec = 0;
-                }
-                if (min == 60) {
-                    hr = hr + 1;
-                    min = 0;
-                    sec = 0;
-                }
-
-                var hrstring = hr;
-                var minstring = min;
-                var secstring = sec;
-                var countstring = count;
-
-                if (hr < 10) {
-                    hrstring = "0" + hrstring;
-                }
-                if (min < 10) {
-                    minstring = "0" + minstring;
-                }
-                if (sec < 10) {
-                    secstring = "0" + secstring;
-                }
-                if (count < 10) {
-                    countstring = "0" + countstring;
-                }
-                document.getElementById("hr").innerHTML = hrstring;
-                document.getElementById("min").innerHTML = minstring;
-                document.getElementById("sec").innerHTML = secstring;
-                document.getElementById("count").innerHTML = countstring;
-                setTimeout("stopwatch()", 10);
-            }
+        if (count < 10) {
+          countString = "0" + countString;
         }
+        document.getElementById("hr").innerHTML = hrString;
+        document.getElementById("min").innerHTML = minString;
+        document.getElementById("sec").innerHTML = secString;
+        document.getElementById("count").innerHTML = countString;
+        setTimeout("stopwatch()", 10);
+      }
+    }
 
-//PASSWORD GENERATOR
-        /*
-        var pasgen = document.getElementById("pgen");
-        function gen(){
-        pasgen.innerHTML = Math.random().toString(36).slice(2) + Math.random().toString(36).toUpperCase().slice(2);
-        }
-        */
+    //PASSWORD GENERATOR===============================================================================================================================================================
 
-    </script>
+    var pasGen = document.getElementById("pGen");
+    function gen() {
+      pasGen.innerHTML = Math.random().toString(36).slice(2) + Math.random().toString(36).toUpperCase().slice(2);
+    }
+
+  </script>
 </body>
 
 </html>
